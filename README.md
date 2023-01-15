@@ -1,3 +1,65 @@
+# devto-clone-mongo-cloudinary
+
+# 🚀 A DEV.to clone using MERN stack and Cloudinary 🚀
+
+## MERN Stack
+
+### React / Express / MongoDB / Redux
+
+https://github.com/coding-to-music/devto-clone-mongo-cloudinary
+
+From / By: https://github.com/marwanm-dev/Devto-clone
+
+https://marwanm-devto-clone.vercel.app/
+
+## Environment Values
+
+```
+CLOUDINARY_CLOUD_NAME=""
+CLOUDINARY_API_KEY=""
+CLOUDINARY_API_SECRET=""
+
+In `client/.env`:
+
+REACT_APP_BASE_URL=http://localhost:5000/api
+REACT_APP_SOCKET_IO_URL=http://localhost:5000
+REACT_APP_GOOGLE_CLIENT_ID=<GOOGLE_CLIENT_ID>
+REACT_APP_FB_APP_ID=<FACEBOOK_CLIENT_ID>
+
+In `.env`:
+
+DB_USER = //user name for db
+DB_PASSWORD = //password for db
+DB_NAME = // name for db
+JWT_KEY = //random string
+COOKIE_KEY = //random string;
+NODE_ENV = 'development';
+CLIENT_URL = //the port of React app, ex: 'http://localhost:3000';
+
+//Google will provide you with the following credentials
+GOOGLE_API_KEY = //API key
+
+//Github will provide you with the following credentials
+GH_CLIENT_ID = //Github's Client ID
+GH_CLIENT_SECRET = //Github's Client Secret
+
+// Twitter will provide you with the following credentials
+TWITTER_CONSUMER_KEY = //Twitter's Consumer key
+TWITTER_CONSUMER_SECRET = //Twitter's Consumer Secret
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/devto-clone-mongo-cloudinary.git
+git push -u origin main
+```
+
 <div align="center">
   <a href="https://marwanm-devto-clone.vercel.app">
         <img src="https://user-images.githubusercontent.com/90101257/190815704-8d15a2f7-0eac-4a4e-9f39-26b093f5068c.png" width="200">
@@ -17,42 +79,42 @@
 
 > Frontend
 
--   React
--   Redux toolkit (Advanced RTK)
--   Tailwind
--   Styled components
--   Framer motion
--   React router
--   Cloudinary (Image hosting)
+- React
+- Redux toolkit (Advanced RTK)
+- Tailwind
+- Styled components
+- Framer motion
+- React router
+- Cloudinary (Image hosting)
 
 > Backend
 
--   MongoDB
--   Express
--   Node.js
--   OAuth (Google/Github)
--   JWT
--   Socket.io (Real-time)
--   Cloudinary
--   Mongoose
--   Axios
+- MongoDB
+- Express
+- Node.js
+- OAuth (Google/Github)
+- JWT
+- Socket.io (Real-time)
+- Cloudinary
+- Mongoose
+- Axios
 
 ## Features
 
--   Login / Signup
--   View / Edit Profile
--   Google / Github OAuth
--   Ultimate mobile responsiveness
--   Real-time Notifications Toasted
--   CRUD Posts / Comments / Replies / Tags
--   Follow / Unfollow Users
--   Follow / Unfollow Tags
--   Like / Unicorn / Bookmark Posts
--   Like comments
--   Advanced Search engine for posts, people and tags
--   Filter for posts
--   Reading List
--   Dashboard
+- Login / Signup
+- View / Edit Profile
+- Google / Github OAuth
+- Ultimate mobile responsiveness
+- Real-time Notifications Toasted
+- CRUD Posts / Comments / Replies / Tags
+- Follow / Unfollow Users
+- Follow / Unfollow Tags
+- Like / Unicorn / Bookmark Posts
+- Like comments
+- Advanced Search engine for posts, people and tags
+- Filter for posts
+- Reading List
+- Dashboard
 
 ## Screenshots
 
