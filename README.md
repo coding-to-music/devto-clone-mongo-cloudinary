@@ -62,6 +62,35 @@ git remote add origin git@github.com:coding-to-music/devto-clone-mongo-cloudinar
 git push -u origin main
 ```
 
+## Server works
+
+```
+Dev.to clone backend API server is Live
+```
+
+## Client gives errors
+
+```
+npm run build
+
+> devto-clone@1.0.0 build
+> vite build
+
+failed to load config from /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/vite.config.js
+error during build:
+RangeError: Maximum call stack size exceeded
+    at RegExp.exec (<anonymous>)
+    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:305:49
+    at Array.reduce (<anonymous>)
+    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
+    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:320:17
+    at Array.reduce (<anonymous>)
+    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
+    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:320:17
+    at Array.reduce (<anonymous>)
+    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
+```
+
 <div align="center">
   <a href="https://marwanm-devto-clone.vercel.app">
         <img src="https://user-images.githubusercontent.com/90101257/190815704-8d15a2f7-0eac-4a4e-9f39-26b093f5068c.png" width="200">
