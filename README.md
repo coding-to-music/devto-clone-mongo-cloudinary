@@ -10,7 +10,9 @@ https://github.com/coding-to-music/devto-clone-mongo-cloudinary
 
 From / By: https://github.com/marwanm-dev/Devto-clone
 
-https://marwanm-devto-clone.vercel.app/
+Client: https://marwanm-devto-clone.vercel.app
+
+Server: https://marwanm-devto-clone-server.onrender.com
 
 ## Environment Values
 
