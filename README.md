@@ -71,24 +71,29 @@ Dev.to clone backend API server is Live
 ## Client gives errors
 
 ```
-npm run build
-
-> devto-clone@1.0.0 build
-> vite build
-
-failed to load config from /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/vite.config.js
-error during build:
-RangeError: Maximum call stack size exceeded
-    at RegExp.exec (<anonymous>)
-    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:305:49
-    at Array.reduce (<anonymous>)
-    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
-    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:320:17
-    at Array.reduce (<anonymous>)
-    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
-    at /mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:320:17
-    at Array.reduce (<anonymous>)
-    at interpolate (/mnt/volume_nyc1_01/devto-clone-mongo-cloudinary/client/node_modules/vite/dist/node/chunks/dep-80fe9c6b.js:304:20)
+fetchBaseQuery.ts:35
+ GET http://localhost:5000/api/tags/limit 404 (Not Found)
+fetchBaseQuery.ts:35
+ GET http://localhost:5000/api/posts 404 (Not Found)
+DevTools failed to load source map: Could not load content for http://localhost:3000/ReactToastify.css.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE
+index.js:4715 [Violation] 'message' handler took 213ms
+[Violation] Forced reflow while executing JavaScript took 34ms
+fetchBaseQuery.ts:35
+ POST http://localhost:5000/api/register 404 (Not Found)
+SignUp.jsx:73
+{status: 'PARSING_ERROR', originalStatus: 404, data: '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta char…>Cannot POST /api/register</pre>\n</body>\n</html>\n', error: `SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON`}
+data
+:
+"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /api/register</pre>\n</body>\n</html>\n"
+error
+:
+"SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+originalStatus
+:
+404
+status
+:
+"PARSING_ERROR"
 ```
 
 <div align="center">

@@ -1,21 +1,22 @@
-import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import tw from 'twin.macro';
-import Error from '../../common/Error';
-import LoadingSpinner from '../../common/LoadingSpinner';
-import OAuth from '../../common/OAuth';
-import RouteWrapper from '../../common/RouteWrapper';
-import { useSignUpMutation } from '../../core/features/auth/authApiSlice';
-import useBase64 from '../../hooks/useBase64';
+import { useEffect, useRef, useState } from "react";
+
+import Error from "../../common/Error";
+import LoadingSpinner from "../../common/LoadingSpinner";
+import OAuth from "../../common/OAuth";
+import RouteWrapper from "../../common/RouteWrapper";
+import tw from "twin.macro";
+import useBase64 from "../../hooks/useBase64";
+import { useNavigate } from "react-router-dom";
+import { useSignUpMutation } from "../../core/features/auth/authApiSlice";
 
 const SignUp = () => {
   const navigate = useNavigate();
 
-  const [name, setName] = useState('');
-  const [user, setUser] = useState('');
-  const [pwd, setPwd] = useState('');
-  const [email, setEmail] = useState('');
-  const [file, setFile] = useState('');
+  const [name, setName] = useState("");
+  const [user, setUser] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [email, setEmail] = useState("");
+  const [file, setFile] = useState("");
   const filePickerRef = useRef();
 
   const [validName, setValidName] = useState(false);
@@ -50,7 +51,7 @@ const SignUp = () => {
     [validName, validUser, validEmail, validPwd]
   );
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (inputsAreValid && !isError) {
       try {
@@ -62,12 +63,12 @@ const SignUp = () => {
           picture,
         }).unwrap();
 
-        setName('');
-        setUser('');
-        setEmail('');
-        setPwd('');
+        setName("");
+        setUser("");
+        setEmail("");
+        setPwd("");
 
-        navigate('/auth/login');
+        navigate("/auth/login");
       } catch (err) {
         console.log(err);
       }
@@ -80,7 +81,9 @@ const SignUp = () => {
       {!isLoading && (
         <Wrapper>
           <Heading>Welcome to DEV Community</Heading>
-          <Paragraph>DEV Community is a community of 748,239 amazing developers</Paragraph>
+          <Paragraph>
+            DEV Community is a community of 748,239 amazing developers
+          </Paragraph>
 
           <OAuth />
 
@@ -89,61 +92,71 @@ const SignUp = () => {
           <Title>Create a new account</Title>
           <form onSubmit={handleSubmit}>
             <InputContainer>
-              <Label htmlFor='name'>Name *</Label>
+              <Label htmlFor="name">Name *</Label>
               <Input
                 ref={nameRef}
-                autoComplete='off'
+                // autoComplete='off'
                 required
-                id='name'
+                id="name"
                 value={name}
-                onChange={e => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
               {!validName && name && <Error>Name not valid</Error>}
             </InputContainer>
 
             <InputContainer>
-              <Label htmlFor='username'>Username *</Label>
+              <Label htmlFor="username">Username *</Label>
               <Input
-                autoComplete='off'
+                // autoComplete='off'
                 required
-                id='username'
+                id="username"
                 value={user}
-                onChange={e => setUser(e.target.value)}
+                onChange={(e) => setUser(e.target.value)}
               />
               {!validUser && user && <Error>Username not valid</Error>}
             </InputContainer>
 
             <InputContainer>
-              <Label htmlFor='email'>Email *</Label>
-              <Input required id='email' value={email} onChange={e => setEmail(e.target.value)} />
+              <Label htmlFor="email">Email *</Label>
+              <Input
+                required
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               {!validEmail && email && <Error>Email not valid</Error>}
             </InputContainer>
             <InputContainer>
-              <Label htmlFor='password'>Password *</Label>
+              <Label htmlFor="password">Password *</Label>
               <Input
-                type='password'
-                id='password'
+                autoComplete="on"
+                type="password"
+                id="password"
                 required
                 value={pwd}
-                onChange={e => setPwd(e.target.value)}
+                onChange={(e) => setPwd(e.target.value)}
               />
               {!validPwd && pwd && <Error>Password not valid</Error>}
             </InputContainer>
 
             <InputContainer>
               <input
-                id='picture'
-                type='file'
+                id="picture"
+                type="file"
                 ref={filePickerRef}
-                style={{ display: 'none' }}
-                onChange={e => setFile(e.target.files[0])}
+                style={{ display: "none" }}
+                onChange={(e) => setFile(e.target.files[0])}
               />
-              <ImagePreview src={picture.toString()} alt='Please pick an image' />
+              <ImagePreview
+                src={picture.toString()}
+                alt="Please pick an image"
+              />
               <Button
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   filePickerRef.current.click();
-                }}>
+                }}
+              >
                 Choose image
               </Button>
             </InputContainer>
