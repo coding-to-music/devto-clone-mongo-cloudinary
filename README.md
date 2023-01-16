@@ -8,6 +8,12 @@
 
 https://github.com/coding-to-music/devto-clone-mongo-cloudinary
 
+https://devto-clone-mongo-cloudinary.vercel.app
+
+https://devto-clone-mongo-cloudinary.vercel.app/pages/api/auth/callback/github
+
+https://devto-clone-mongo-cloudinary.vercel.app/api/auth/callback/github
+
 From / By: https://github.com/marwanm-dev/Devto-clone
 
 Client: https://marwanm-devto-clone.vercel.app
