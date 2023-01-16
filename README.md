@@ -1,6 +1,6 @@
 # devto-clone-mongo-cloudinary
 
-# 🚀 A DEV.to clone using MERN stack and Cloudinary 🚀
+# 🚀 DEV.to clone using MERN stack and Cloudinary 🚀
 
 ## MERN Stack
 
