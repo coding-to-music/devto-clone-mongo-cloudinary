@@ -29,31 +29,22 @@ CLOUDINARY_API_SECRET=""
 
 In `client/.env`:
 
-REACT_APP_BASE_URL=http://localhost:5000/api
-REACT_APP_SOCKET_IO_URL=http://localhost:5000
-REACT_APP_GOOGLE_CLIENT_ID=<GOOGLE_CLIENT_ID>
-REACT_APP_FB_APP_ID=<FACEBOOK_CLIENT_ID>
+BASE_URL=http://localhost:5000
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 
-In `.env`:
+In `server/.env`:
 
-DB_USER = //user name for db
-DB_PASSWORD = //password for db
-DB_NAME = // name for db
-JWT_KEY = //random string
-COOKIE_KEY = //random string;
-NODE_ENV = 'development';
-CLIENT_URL = //the port of React app, ex: 'http://localhost:3000';
+ACCESS_TOKEN_SECRET=""
+REFRESH_TOKEN_SECRET=""
 
-//Google will provide you with the following credentials
-GOOGLE_API_KEY = //API key
+CLIENT_URL='http://localhost:3000'
 
-//Github will provide you with the following credentials
-GH_CLIENT_ID = //Github's Client ID
-GH_CLIENT_SECRET = //Github's Client Secret
+MONGO_URI="mongodb+srv://<userid>:<password>@cluster0.<server>.mongodb.net/devto-clone-mongo-cloudinary?retryWrites=true&w=majority"
 
-// Twitter will provide you with the following credentials
-TWITTER_CONSUMER_KEY = //Twitter's Consumer key
-TWITTER_CONSUMER_SECRET = //Twitter's Consumer Secret
+CLOUDINARY_CLOUD_NAME=""
+CLOUDINARY_API_KEY=""
+CLOUDINARY_API_SECRET=""
 ```
 
 ## GitHub
@@ -74,32 +65,10 @@ git push -u origin main
 Dev.to clone backend API server is Live
 ```
 
-## Client gives errors
+## errors
 
 ```
-fetchBaseQuery.ts:35
- GET http://localhost:5000/api/tags/limit 404 (Not Found)
-fetchBaseQuery.ts:35
- GET http://localhost:5000/api/posts 404 (Not Found)
-DevTools failed to load source map: Could not load content for http://localhost:3000/ReactToastify.css.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE
-index.js:4715 [Violation] 'message' handler took 213ms
-[Violation] Forced reflow while executing JavaScript took 34ms
-fetchBaseQuery.ts:35
- POST http://localhost:5000/api/register 404 (Not Found)
-SignUp.jsx:73
-{status: 'PARSING_ERROR', originalStatus: 404, data: '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta char…>Cannot POST /api/register</pre>\n</body>\n</html>\n', error: `SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON`}
-data
-:
-"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /api/register</pre>\n</body>\n</html>\n"
-error
-:
-"SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
-originalStatus
-:
-404
-status
-:
-"PARSING_ERROR"
+
 ```
 
 <div align="center">
@@ -224,33 +193,25 @@ ENV variables
 `client/.env`:
 
 ```js
-BASE_URL=
-GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
-GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+BASE_URL=http://localhost:5000
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 ```
 
 `server/.env`:
 
 ```js
-ACCESS_TOKEN_SECRET=
-REFRESH_TOKEN_SECRET=
+ACCESS_TOKEN_SECRET = "";
+REFRESH_TOKEN_SECRET = "";
 
-CLIENT_URL=
+CLIENT_URL = "http://localhost:3000";
 
-GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
-GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
-GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+MONGO_URI =
+  "mongodb+srv://<userid>:<password>@cluster0.<server>.mongodb.net/devto-clone-mongo-cloudinary?retryWrites=true&w=majority";
 
-DB_NAME=
-DB_USER=
-DB_PASSWORD=
-
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-CLOUDINARY_DEFAULT_URL= // default image url
-CLOUDINARY_DEFAULT_PUBLIC_ID= // default image public_id
+CLOUDINARY_CLOUD_NAME = "";
+CLOUDINARY_API_KEY = "";
+CLOUDINARY_API_SECRET = "";
 ```
 
 Finally, run <code>npm run stack</code> on the root of the two subdirectories
