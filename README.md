@@ -192,7 +192,7 @@ ENV variables
 
 `client/.env`:
 
-```js
+```
 BASE_URL=http://localhost:5000
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
@@ -200,18 +200,18 @@ GITHUB_CLIENT_SECRET=
 
 `server/.env`:
 
-```js
-ACCESS_TOKEN_SECRET = "";
-REFRESH_TOKEN_SECRET = "";
+```
+ACCESS_TOKEN_SECRET = ""
+REFRESH_TOKEN_SECRET = ""
 
-CLIENT_URL = "http://localhost:3000";
+CLIENT_URL = "http://localhost:3000"
 
 MONGO_URI =
-  "mongodb+srv://<userid>:<password>@cluster0.<server>.mongodb.net/devto-clone-mongo-cloudinary?retryWrites=true&w=majority";
+  "mongodb+srv://<userid>:<password>@cluster0.<server>.mongodb.net/devto-clone-mongo-cloudinary?retryWrites=true&w=majority"
 
-CLOUDINARY_CLOUD_NAME = "";
-CLOUDINARY_API_KEY = "";
-CLOUDINARY_API_SECRET = "";
+CLOUDINARY_CLOUD_NAME = ""
+CLOUDINARY_API_KEY = ""
+CLOUDINARY_API_SECRET = ""
 ```
 
 Finally, run <code>npm run stack</code> on the root of the two subdirectories
